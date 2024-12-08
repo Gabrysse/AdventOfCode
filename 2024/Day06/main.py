@@ -8,12 +8,6 @@ Link to the problem: https://adventofcode.com/2024/day/6
 import time
 
 
-def split_data(data):
-    lines = data
-    columns = ["".join(line[i] for line in lines) for i in range(len(lines[0]))]
-    return lines, columns
-
-
 def print_map(data):
     print("   0 1 2 3 4 5 6 7 8 9")
     print("-----------------------")
