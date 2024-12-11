@@ -25,24 +25,24 @@ def blinking(data):
     for value, n_elements in data.items():
         if value == 0:
             if 1 not in new_data:
-                new_data[1] = 1 * n_elements
+                new_data[1] = n_elements
             else:
-                new_data[1] += 1 * n_elements
+                new_data[1] += n_elements
         elif len(str(value)) % 2 == 0:
             value = str(value)
             stone1 = value[: len(value) // 2]
             stone2 = value[len(value) // 2 :]
             for stone in [int(stone1), int(stone2)]:
                 if stone not in new_data:
-                    new_data[stone] = 1 * n_elements
+                    new_data[stone] = n_elements
                 else:
-                    new_data[stone] += 1 * n_elements
+                    new_data[stone] += n_elements
         else:
             stone = value * 2024
             if stone not in new_data:
-                new_data[stone] = 1 * n_elements
+                new_data[stone] = n_elements
             else:
-                new_data[stone] += 1 * n_elements
+                new_data[stone] += n_elements
 
     return new_data
 
